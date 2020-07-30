@@ -1,4 +1,8 @@
 import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+# import somoclu
+# %matplotlib inline
 
 data = [[1, 1, 0, 0],
         [0, 0, 0, 1],
@@ -62,3 +66,19 @@ for xTest in dataTest:
     print("---------------------Hasil cluster --------------------------")
     print("cluster 1: ", cluster1)
     print("cluster 2: ", cluster2)
+c1 = np.array(cluster1)
+c2 = np.array(cluster2)
+print("--------------------------------final00000000000000")
+print(c1)
+print(c2)
+
+# data = np.float32(np.concatenate((cluster1, cluster2)))
+# colors = ["red"] * 50
+# colors.extend(["green"] * 50)
+# fig = plt.figure()
+# ax = Axes3D(fig)
+# ax.scatter(data[:, 0], data[:, 0], c=colors)
+# labels = range(150)
+
+plt.scatter(c1[0], c2[0])
+plt.show()
