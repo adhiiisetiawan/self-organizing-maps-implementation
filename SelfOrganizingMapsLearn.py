@@ -11,7 +11,7 @@ data = [[1, 1, 0, 0],
 alpha = 0.6
 beta = 0.5
 epoch = 0
-maxEpoch = 1
+maxEpoch = 10
 
 weight = [[0.2, 0.6, 0.5, 0.9],
           [0.8, 0.4, 0.7, 0.3]]
@@ -80,5 +80,5 @@ print(c2)
 # ax.scatter(data[:, 0], data[:, 0], c=colors)
 # labels = range(150)
 
-plt.scatter(c1[0], c2[0])
-plt.show()
+# plt.scatter(c1[0], c2[0])
+# plt.show()
