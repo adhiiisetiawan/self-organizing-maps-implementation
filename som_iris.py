@@ -11,7 +11,7 @@ epoch = 0
 maxEpoch = 100
 
 np_data = np.array(atribute)
-np_weight = np.around(np.random.uniform(low=0, high=1, size=(3,4)), 2)
+np_weight = np.around(np.random.uniform(low=0, high=1, size=(3,4)), 3)
 # print(np_data)
 # print(np_weight)
 
@@ -39,7 +39,9 @@ while epoch < maxEpoch:
     epoch +=1
 
 dataTest = [[5.1, 3.8, 1.9, 0.4],
-            [7.0, 3.2, 4.7, 1.4]]
+            [7.0, 3.2, 4.7, 1.4],
+            [1.1, 2.3, 1.2, 1.2],
+            [9.4, 3.3, 7.5, 1.3]]
 
 print("------------------ Testing ------------------")
 cluster1 = []
@@ -59,7 +61,7 @@ for xTest in dataTest:
     elif testing[1] <= testing[0] and testing[1] <= testing[2]:
         print("pemenang =", testing[1], "termasuk cluster 2")
         cluster2.append(testing[1])
-    else:
+    elif testing[2] <= testing[0] and testing[2] <= testing[1]:
         print("pemenang =", testing[2], "termasuk cluster 3")
         cluster3.append(testing[2])
     print("===============================")
